@@ -1,0 +1,18 @@
+What is an ORM?
+
+  Object RElational Mapping. Lets you interact with an sql database
+  like its a ruby object. kind of an intermediary between sql and ruby
+
+Why is Active Record more useful than just using SQL?
+
+  Active record lets us communcate with sql instead of having to
+  turn each sql command and response into something that ruby can access
+
+What are the two steps required to make a new row in your database table with ActiveRecord?
+
+  u = User.new(attributes_hash)
+  u.save
+  OR
+  u = User.create(attributes_hash)
+
+What are “generators” in Rails?

@@ -1,0 +1,17 @@
+What is the “Asset Pipeline”?
+
+  Rails turns all assets into one glob for each type, flattens them out,
+  and sends them to the browser.
+
+What are “Manifest Files”?
+
+  Files tha ttell rails which files to include in the asset pipeline
+
+Why would you namespace your stylesheets?
+
+  namespace stylesheets to fenceoff particluar styles so that a "container"
+  in one area can look different somewhere else.
+
+What does it mean to “Escape” HTML?
+
+  displaying literally <p> paragraph </p> instead of running itheck
