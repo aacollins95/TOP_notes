@@ -1,0 +1,63 @@
+What is a layout?
+
+  The basic html template that all pages need to include in order to be
+  processed by the browser, and links to assets (ie. head, doctype, etc.).
+  Things that are needed on each webpage should go here.
+
+What’s the difference between a “view template” and a “layout”?
+
+  View templates are inserted into layouts. Layputs are like the static
+  background while templates are more dynamic and tailored to each
+  different page
+
+What is a “Preprocessor”?
+
+  Something that uses embedded ruby to create a particular filetype.
+  This is the frist thing rails does when templates are rendered
+
+Why are preprocessors useful?
+
+  Using embedded ruby to create an html or css file saves times and
+  reduces mistakes
+
+How do you make sure a preprocessor runs on your file?
+What’s the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
+
+  outputted to html and css respectively
+
+What is the difference between the <%= and <% tags?
+
+  Both are considered embedded ruby. <%= will put the result of the ruby into
+  the docuement, while <% wil  run, but not insert the result into the doc.
+  Don't forget <%end%>
+
+What is a view partial?
+
+  Basically it's like a variable version of html that you can then use
+  later in displaying more complex webpages
+
+How do you insert a partial into your view?
+
+  NAme the partial _*.(html/css/js).EMBEDDED. render "*". Rails only looks
+  in current folder, so popular partials should go into app/views/shared
+  rendered as <%= render "shared/*" %>
+
+How can you tell that a view file is a partial?
+
+  filename starts with an underscore I guess
+
+How do you pass a local variable to a partial?
+
+  render is just a mthod like render("*",options_hash). Pass options as
+  :local => {} where the empty hash is a bunch of local variables. Then
+  call the passed variable as normal variables.
+
+What’s the magical Rails shortcut for rendering a User? A bunch of Users?
+
+  <%= render user(/s) %>
+
+What are asset tags and why are they used?
+
+  they add assets to your html, rails way to add assets
+
+Use link_to
